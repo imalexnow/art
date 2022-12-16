@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>imalexnow</title>
+    <link rel="stylesheet" href="frame.css">
+    <style>
+        img {
+            width: 512px;
+            height: auto;
+            max-width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="frames">
+        <li class="frame">
+            <video width="512" height="512" autoplay loop muted>
+  <source src="" type="video/webm" name="canvas" />
+</video>
+        </li>
+    </ul>
+    <script>
+        var imgArr = [
+            "images/envelopeheart.webm",
+            
+        ];
+        var num = Math.floor(Math.random() * (imgArr.length));
+        // document.canvas.src = imgArr[num];
+        var video = document.getElementsByTagName('video')[0];
+var sources = video.getElementsByTagName('source');
+sources[0].src = imgArr[num];
+video.load();
+    </script>
+</body>
+
+</html>
