@@ -20,27 +20,25 @@
     <ul class="frames">
         <li class="frame">
             <video width="512" height="512" autoplay loop muted>
-  <source src="" type="video/webm" name="canvas" />
-</video>
+                <source src="" type="video/mp4" name="canvas" />
+            </video>
         </li>
     </ul>
     <script>
         var imgArr = [
-            "images/envelopeheart.webm",
-            "images/doveheart.webm",
-            "images/monsterdoll.webm",
-            "images/monsterdoll2.webm",
-            "images/pebble.webm",
-            "images/vial.webm",
-            "images/garos.webm",
-            
+            "images/envelopeheart.mp4",
+            "images/doveheart.mp4",
+            "images/monsterdoll.mp4",
+            "images/monsterdoll2.mp4",
+            "images/pebble.mp4",
+            "images/vial.mp4",
+            "images/garos.mp4",
         ];
         var num = Math.floor(Math.random() * (imgArr.length));
-        // document.canvas.src = imgArr[num];
         var video = document.getElementsByTagName('video')[0];
-var sources = video.getElementsByTagName('source');
-sources[0].src = imgArr[num];
-video.load();
+        var sources = video.getElementsByTagName('source');
+        sources[0].src = imgArr[num];
+        video.load();
     </script>
 </body>
 
