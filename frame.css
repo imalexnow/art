@@ -12,7 +12,7 @@ body {
 	overflow-x: hidden;
 }
 
-.frames,
+/* .frames,
 .frame {
 	list-style: none;
 	list-style-type: none;
@@ -26,11 +26,11 @@ body {
 	width: 100%;
 	max-width: 1200px;
 	text-align: center;
-}
+} */
 
 .frame {
-	display: inline-block;
-	padding: 30px;
+	/* display: inline-block;
+	padding: 30px; */
 	border-width: 20px;
 	border-style: solid;
 	border-color: #2F2D2D #434040 #4F4C4C #434040;

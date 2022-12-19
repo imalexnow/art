@@ -2,44 +2,75 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>imalexnow</title>
-    <link rel="stylesheet" href="frame.css">
-    <style>
-        img {
-            width: 512px;
-            height: auto;
-            max-width: 100%;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>imalexnow</title>
+  <link rel="stylesheet" href="frame.css">
+  <style>
+    .frames {
+      list-style: none;
+      list-style-type: none;
+      padding: 10px;
+    }
+
+    @media all and (min-width:770px) {
+      .frame {
+        max-width: 512px;
+        padding: 30px;
+        border-width: 40px;
+      }
+    }
+
+    @media all and (max-width: 769px) {
+      .frame {
+        max-width: 256px;
+        padding: 15px;
+        border-width: 20px;
+      }
+    }
+
+    .frame {
+      margin: auto auto;
+      aspect-ratio: 1/1;
+      position: absolute;
+      top: 10px;
+      bottom: 10px;
+      left: 10px;
+      right: 10px;
+    }
+
+    .frame video {
+      width: 100%;
+      height: 100%;
+    }
+  </style>
 </head>
 
 <body>
-    <ul class="frames">
-        <li class="frame">
-            <video width="512" height="512" autoplay loop muted playsinline>
-                <source src="" type="video/mp4" name="canvas" />
-            </video>
-        </li>
-    </ul>
-    <script>
-        var imgArr = [
-            "videos/converted/envelopeheart.mp4",
-            "videos/converted/doveheart.mp4",
-            "videos/converted/monsterdoll.mp4",
-            "videos/converted/monsterdoll2.mp4",
-            "videos/converted/pebble.mp4",
-            "videos/converted/vial.mp4",
-            "videos/converted/garos.mp4",
-        ];
-        var num = Math.floor(Math.random() * (imgArr.length));
-        var video = document.getElementsByTagName('video')[0];
-        var sources = video.getElementsByTagName('source');
-        sources[0].src = imgArr[num];
-        video.load();
-    </script>
+  <ul class="frames">
+    <li class="frame">
+      <video width="512" height="512" autoplay loop muted playsinline>
+        <source src="" type="video/mp4" name="canvas" />
+      </video>
+    </li>
+  </ul>
+  <script>
+    var imgArr = [
+      "videos/converted/envelopeheart.mp4",
+      "videos/converted/doveheart.mp4",
+      "videos/converted/monsterdoll.mp4",
+      "videos/converted/monsterdoll2.mp4",
+      "videos/converted/pebble.mp4",
+      "videos/converted/vial.mp4",
+      "videos/converted/garos.mp4",
+    ];
+    var num = Math.floor(Math.random() * (imgArr.length));
+    var video = document.getElementsByTagName('video')[0];
+    var sources = video.getElementsByTagName('source');
+    sources[0].src = imgArr[num];
+    video.load();
+  </script>
 </body>
 
 </html>
